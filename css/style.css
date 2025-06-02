@@ -5,174 +5,188 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #212529;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 0;
+  margin: 0;
 }
 
-/* Perfil */
-.perfil {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
 }
 
-.tarjeta-perfil {
-  background: #fff;
-  padding: 30px;
-  max-width: 700px;
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+/* Secciones */
+section {
+  padding: 3rem 0;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* Foto de perfil */
+#perfil {
   text-align: center;
 }
 
-.foto-perfil {
-  width: 120px;
-  height: 120px;
+#perfil img {
+  width: 160px;
+  height: 160px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  border: 4px solid #0077cc;
 }
 
-/* Portafolio */
-#portafolio h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.botones-categorias {
+/* Botones de filtro */
+#filtros {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 25px;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
 }
 
-.btn-filtro {
-  padding: 10px 20px;
-  background-color: #dee2e6;
+#filtros button {
+  padding: 0.5rem 1rem;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.btn-filtro:hover {
-  background-color: #ced4da;
-}
-
-.btn-filtro.activo {
-  background-color: #0d6efd;
+  background-color: #0077cc;
   color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.95rem;
 }
 
-/* Grid de proyectos */
-.grid-proyectos {
+#filtros button:hover,
+#filtros button.active {
+  background-color: #005fa3;
+}
+
+/* Proyectos */
+#proyectos {
   display: grid;
-  gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  padding: 0 10px;
+  gap: 2rem;
 }
 
-.tarjeta-proyecto {
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+/* Tarjeta de proyecto */
+.proyecto {
+  background-color: #fff;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease;
 }
 
-.tarjeta-proyecto:hover {
-  transform: translateY(-4px);
+.proyecto:hover {
+  transform: scale(1.02);
 }
 
-.tarjeta-proyecto img {
+.proyecto img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-.tarjeta-proyecto .contenido {
-  padding: 15px;
-}
-
-.tarjeta-proyecto h3 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-.tarjeta-proyecto p {
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-}
-
-.tarjeta-proyecto a {
-  display: inline-block;
-  color: #0d6efd;
-  font-weight: bold;
-  text-decoration: none;
-  margin-top: auto;
-}
-
-.tarjeta-proyecto a:hover {
-  text-decoration: underline;
-}
-
-/* Contacto */
-#contacto {
-  margin-top: 60px;
+.proyecto .contenido {
+  padding: 1rem;
+  flex-grow: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.tarjeta-contacto {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  text-align: center;
+.proyecto h3 {
+  font-size: 1.1rem;
+  color: #0077cc;
+  margin-bottom: 0.5rem;
 }
 
-.tarjeta-contacto a {
-  color: #0d6efd;
+.proyecto p {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.proyecto .herramientas {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.proyecto a {
   text-decoration: none;
+  color: #fff;
+  background-color: #28a745;
+  padding: 0.5rem;
+  border-radius: 6px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
-.tarjeta-contacto a:hover {
+.proyecto a:hover {
+  background-color: #218838;
+}
+
+/* Sección contacto */
+#contacto {
+  background-color: #0077cc;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+#contacto a {
+  color: #fff;
   text-decoration: underline;
 }
 
-/* Responsive ajustes menores */
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #003d66;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Responsividad */
 @media (max-width: 768px) {
-  .foto-perfil {
-    width: 100px;
-    height: 100px;
+  #filtros {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .tarjeta-perfil {
-    padding: 20px;
+  #filtros button {
+    width: 80%;
+    margin: 0.25rem 0;
   }
 
-  .botones-categorias {
-    gap: 8px;
+  .proyecto img {
+    height: 160px;
   }
 
-  .btn-filtro {
+  .proyecto h3 {
+    font-size: 1rem;
+  }
+
+  .proyecto p {
     font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-
-  #portafolio h2 {
-    font-size: 1.5rem;
   }
 }
