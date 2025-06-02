@@ -1,4 +1,4 @@
-/* Reset básico y fuente */
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -6,248 +6,173 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #222;
-  padding: 1rem;
+  padding: 20px;
 }
 
 /* Perfil */
 .perfil {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 900px;
-  margin: 0 auto 2rem auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.perfil img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-.perfil h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #003049;
-}
-
-.perfil h2 {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-.perfil p {
-  max-width: 600px;
-  margin-bottom: 1rem;
-  color: #444;
-}
-
-.perfil a {
-  color: #0077b6;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.perfil a:hover {
-  text-decoration: underline;
-}
-
-/* Filtros */
-.filtros {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 2rem;
-  gap: 0.5rem;
+  margin-bottom: 40px;
 }
 
-.filtros button {
-  background-color: #e0e0e0;
+.tarjeta-perfil {
+  background: #fff;
+  padding: 30px;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Portafolio */
+#portafolio h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.botones-categorias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.btn-filtro {
+  padding: 10px 20px;
+  background-color: #dee2e6;
   border: none;
-  padding: 0.6rem 1.2rem;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
-.filtros button:hover {
-  background-color: #90e0ef;
+.btn-filtro:hover {
+  background-color: #ced4da;
 }
 
-.filtros button.active {
-  background-color: #023e8a;
+.btn-filtro.activo {
+  background-color: #0d6efd;
   color: #fff;
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 119, 182, 0.4);
 }
 
-/* Proyectos */
-#proyectos {
+/* Grid de proyectos */
+.grid-proyectos {
   display: grid;
+  gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0 10px;
 }
 
-.proyecto {
-  background-color: #ffffff;
+.tarjeta-proyecto {
+  background: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
-.proyecto:hover {
+.tarjeta-proyecto:hover {
   transform: translateY(-4px);
 }
 
-.proyecto img {
+.tarjeta-proyecto img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-.proyecto .contenido {
-  padding: 1rem;
+.tarjeta-proyecto .contenido {
+  padding: 15px;
 }
 
-.proyecto h3 {
+.tarjeta-proyecto h3 {
   font-size: 1.1rem;
-  color: #023047;
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
 }
 
-.proyecto p {
+.tarjeta-proyecto p {
+  margin-bottom: 10px;
   font-size: 0.95rem;
-  color: #333;
-  margin-bottom: 0.5rem;
 }
 
-.proyecto .herramientas {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-
-.proyecto a {
+.tarjeta-proyecto a {
   display: inline-block;
-  margin-top: auto;
-  color: #0077b6;
+  color: #0d6efd;
   font-weight: bold;
   text-decoration: none;
+  margin-top: auto;
 }
 
-.proyecto a:hover {
+.tarjeta-proyecto a:hover {
   text-decoration: underline;
 }
 
 /* Contacto */
-.contacto {
-  max-width: 600px;
-  margin: 3rem auto 0 auto;
-  padding: 1.5rem;
-  background-color: #ffffff;
+#contacto {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.tarjeta-contacto {
+  background: #ffffff;
+  padding: 25px;
   border-radius: 10px;
-  text-align: center;
+  max-width: 500px;
+  width: 100%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
 
-.contacto h2 {
-  font-size: 1.6rem;
-  color: #023047;
-  margin-bottom: 1rem;
-}
-
-.contacto p {
-  color: #444;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.contacto a {
-  color: #0077b6;
-  font-weight: bold;
+.tarjeta-contacto a {
+  color: #0d6efd;
   text-decoration: none;
 }
 
-.contacto a:hover {
+.tarjeta-contacto a:hover {
   text-decoration: underline;
 }
 
-/* Responsive media queries */
+/* Responsive ajustes menores */
 @media (max-width: 768px) {
-  .perfil {
-    padding: 1rem;
+  .foto-perfil {
+    width: 100px;
+    height: 100px;
   }
 
-  .perfil img {
-    width: 120px;
-    height: 120px;
+  .tarjeta-perfil {
+    padding: 20px;
   }
 
-  .perfil h1 {
-    font-size: 1.6rem;
+  .botones-categorias {
+    gap: 8px;
   }
 
-  .perfil h2 {
-    font-size: 1rem;
+  .btn-filtro {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 
-  .filtros {
-    flex-direction: column;
-    align-items: center;
+  #portafolio h2 {
+    font-size: 1.5rem;
   }
-
-  .proyecto img {
-    height: 150px;
-  }
-}
-
-/* 🌙 Modo oscuro */
-body.dark-mode {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-}
-
-.dark-mode .perfil,
-.dark-mode .proyecto,
-.dark-mode .contacto {
-  background-color: #2b2b2b;
-  color: #e0e0e0;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
-}
-
-.dark-mode .filtros button {
-  background-color: #0077b6;
-  color: #fff;
-}
-
-.dark-mode .filtros button:hover {
-  background-color: #90e0ef;
-  color: #000;
-}
-
-.dark-mode .filtros button.active {
-  background-color: #48cae4;
-  box-shadow: 0 0 10px rgba(144, 224, 239, 0.5);
-  color: #000;
-}
-
-.dark-mode a {
-  color: #90e0ef;
 }
