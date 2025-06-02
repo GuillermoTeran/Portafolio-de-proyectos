@@ -1,176 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Guillermo Teran Portafolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header, footer {
-      background-color: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
-      background-color: #222;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-    }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-    .project {
-      background-color: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    .project img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      margin-top: 10px;
-    }
-    .language-switch {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    .language-switch button {
-      padding: 5px 10px;
-      border: none;
-      cursor: pointer;
-      background-color: #007BFF;
-      color: white;
-      border-radius: 5px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guillermo Teran – Analista de Datos</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  <div class="language-switch">
-    <button onclick="window.location.href='index-es.html'">English</button>
-  </div>
-  <header>
-    <h1>Guillermo Teran</h1>
-    <h2>Analista de Datos</h2>
-    <p>Fátima, Portugal | +351 961 900 127</p>
+  <!-- Sección 1: Datos personales -->
+  <header class="perfil">
+    <img src="images/profile.jpg" alt="Foto de perfil de Guillermo Teran" class="foto-perfil" />
+    <div class="info-personal">
+      <h1>Guillermo Teran</h1>
+      <h2>Analista de Datos</h2>
+      <p><strong>Teléfono:</strong> +351 961 900 127</p>
+      <p><strong>Ubicación:</strong> Fátima – Portugal</p>
+      <p class="descripcion">
+        Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranzas y desarrollo de KPI’s, apasionado por la transformación de datos en información valiosa para la toma de decisiones estratégicas. Cuento con habilidades en herramientas como Excel avanzado, SQL, Python y Tableau lo que me permite extraer, limpiar y visualizar datos de manera eficiente. Busco una oportunidad para aplicar mis habilidades de Python y contribuir a la optimización de procesos analíticos mediante la generación de informes estratégicos y la mejora en la toma de decisiones basadas en datos.
+      </p>
+      <p class="aficiones">
+        <strong>Aficiones:</strong> Caminar al aire libre y disfrutar de la naturaleza, leer artículos sobre política, negocios y tecnología, ver partidos de fútbol y tennis.
+      </p>
+    </div>
   </header>
 
-  <section>
-    <h2>Perfil Profesional y Aficiones</h2>
-    <p>Soy un Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranza y desarrollo de KPIs. Apasionado por transformar datos en información valiosa para la toma de decisiones estratégicas. Tengo habilidades en herramientas como Excel avanzado, SQL, Python y Tableau, que me permiten extraer, limpiar y visualizar datos de forma eficiente. Busco una oportunidad para aplicar mis habilidades en Python y contribuir a optimizar procesos analíticos mediante reportes estratégicos y decisiones basadas en datos.</p>
-    <p>Me gusta caminar al aire libre, ver partidos de fútbol y tenis, y leer artículos sobre política, negocios y tecnología.</p>
-  </section>
-
-  <nav>
-    <a href="#analysis">Análisis de Datos</a>
-    <a href="#dashboards">Dashboards</a>
-  </nav>
-
-  <section id="analysis">
-    <h2>Proyectos de Análisis de Datos</h2>
-
-    <div class="project">
-      <h3>Predicción de Cancelación de Clientes y Segmentación de Usuarios — Proyecto Model Fitness</h3>
-      <p>Modelado predictivo y segmentación para reducir la cancelación en una cadena de gimnasios.</p>
-      <a href="https://github.com/GuillermoTeran/Prediccion-de-cancelacion-de-clientes-y-segmentacion-de-usuarios-Proyecto-para-Model-Fitness" target="_blank">Ver en GitHub</a>
-      <img src="https://source.unsplash.com/featured/?fitness,data" alt="Proyecto Fitness">
+  <!-- Sección 2: Portafolio de Proyectos -->
+  <main class="proyectos">
+    <h2>Portafolio de Proyectos</h2>
+    <div class="filtros">
+      <button onclick="filtrarProyectos('todos')">Todos</button>
+      <button onclick="filtrarProyectos('dashboard')">Dashboards</button>
+      <button onclick="filtrarProyectos('analisis')">Análisis de Datos</button>
     </div>
+    <div id="contenedor-proyectos" class="contenedor-proyectos"></div>
+  </main>
 
-    <div class="project">
-      <h3>Análisis de Comportamiento de Usuario y Test A/A/B en una App de Productos Alimenticios</h3>
-      <p>Análisis de comportamiento de usuario y pruebas estadísticas para mejorar la conversión de la app.</p>
-      <a href="https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-usuario-y-test-A-A-B-en-una-app-de-productos-alimenticios" target="_blank">Ver en GitHub</a>
-      <img src="https://source.unsplash.com/featured/?food,app" alt="Proyecto App de Comida">
-    </div>
+  <!-- Sección 3: Contacto -->
+  <footer class="contacto">
+    <h2>Contacto</h2>
+    <p><strong>Correo:</strong> <a href="mailto:teranguillermo59@gmail.com">teranguillermo59@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/guillermo-teran" target="_blank">www.linkedin.com/in/guillermo-teran</a></p>
+  </footer>
 
-    <div class="project">
-      <h3>Estudio de Caso SQL: Comportamiento de Lectores Durante la Pandemia</h3>
-      <p>Análisis de patrones de lectura para apoyar el desarrollo editorial digital.</p>
-      <a href="https://github.com/GuillermoTeran/Caso-de-Estudio-SQL-Analisis-del-Comportamiento-de-Lectores-Durante-la-Pandemia" target="_blank">Ver en GitHub</a>
-      <img src="https://source.unsplash.com/featured/?books,reading" alt="Proyecto Lectura">
-    </div>
+  <script src="proyectos.js"></script>
+  <script>
+    const contenedor = document.getElementById("contenedor-proyectos");
 
-    <div class="project">
-      <h3>Estudio de Caso: Identificación de Operadores Ineficaces en Telefonía Virtual</h3>
-      <p>Análisis operativo para detectar agentes de soporte con bajo desempeño.</p>
-      <a href="https://github.com/GuillermoTeran/Caso-de-Estudio-Deteccion-de-Operadores-Ineficaces-en-un-Servicio-de-Telefonia-Virtual" target="_blank">Ver en GitHub</a>
-      <img src="https://source.unsplash.com/featured/?callcenter,data" alt="Proyecto Call Center">
-    </div>
+    function mostrarProyectos(filtrados) {
+      contenedor.innerHTML = "";
+      filtrados.forEach(proyecto => {
+        const div = document.createElement("div");
+        div.className = "proyecto";
+        div.innerHTML = `
+          <img src="${proyecto.imagen}" alt="${proyecto.titulo}" />
+          <h3>${proyecto.titulo}</h3>
+          <p>${proyecto.descripcion}</p>
+          <p><strong>Herramientas:</strong> ${proyecto.herramientas}</p>
+          <a href="${proyecto.github}" target="_blank">Ver en GitHub</a>
+        `;
+        contenedor.appendChild(div);
+      });
+    }
 
-    <div class="project">
-      <h3>Análisis de Datos Zuber: Comportamiento de Viajes Compartidos en Chicago</h3>
-      <p>Exploración de datos de transporte urbano incluyendo clima y preferencias de usuarios.</p>
-      <a href="https://github.com/GuillermoTeran/Analisis-de-datos-para-Zuber-Comportamiento-de-viajes-compartidos-en-Chicago" target="_blank">Ver en GitHub</a>
-      <img src="https://source.unsplash.com/featured/?taxi,uber" alt="Proyecto Zuber">
-    </div>
+    function filtrarProyectos(categoria) {
+      if (categoria === "todos") {
+        mostrarProyectos(proyectos);
+      } else {
+        const filtrados = proyectos.filter(p => p.categoria === categoria);
+        mostrarProyectos(filtrados);
+      }
+    }
 
-    <div class="project">
-      <h3>Análisis de Tarifas Prepago — Proyecto Megaline</h3>
-      <p>Comparación de ingresos y tendencias de uso para planes prepago de telecomunicaciones.</p>
-      <a href="https://github.com/GuillermoTeran/Analisis-de-tarifas-prepago---Proyecto-Megaline" target="_blank">Ver en GitHub</a>
-      <img src="https://source.unsplash.com/featured/?telecom,data" alt="Proyecto Megaline">
-    </div>
-
-    <div class="project">
-      <h3>Análisis de Ventas de Videojuegos y Detección de Patrones de Éxito — Proyecto Ice Games</h3>
-      <p>Identificación de factores de éxito en ventas globales de videojuegos.</p>
-      <a href="https://github.com/GuillermoTeran/Analisis-de-ventas-de-videojuegos-y-deteccion-de-patrones-de-exito-Proyecto-Ice-Games" target="_blank">Ver en GitHub</a>
-      <img src="https://source.unsplash.com/featured/?videogame,sales" alt="Proyecto Videojuegos">
-    </div>
-
-    <div class="project">
-      <h3>Priorización de Hipótesis y Test A/B — Optimización de E-commerce</h3>
-      <p>Evaluación y pruebas de hipótesis para aumentar los ingresos de comercio electrónico.</p>
-      <a href="https://github.com/GuillermoTeran/Priorizacion-de-hipotesis-y-analisis-de-prueba-A-B-para-optimizacion-de-ingresos---Proyecto-de-Ecommerce" target="_blank">Ver en GitHub</a>
-      <img src="https://source.unsplash.com/featured/?ecommerce,abtest" alt="Proyecto E-commerce">
-    </div>
-
-    <div class="project">
-      <h3>Análisis de Comportamiento de Compra de Clientes — Proyecto Instacart</h3>
-      <p>Exploración de hábitos de compra y segmentación de clientes en comestibles en línea.</p>
-      <a href="https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-compra-de-clientes-Proyecto-Instacart" target="_blank">Ver en GitHub</a>
-      <img src="https://source.unsplash.com/featured/?groceries,data" alt="Proyecto Instacart">
-    </div>
-
-    <div class="project">
-      <h3>Eficiencia de Marketing y Comportamiento de Clientes — Proyecto Showz</h3>
-      <p>Evaluación del ROI y segmentación de clientes para eventos y entretenimiento.</p>
-      <a href="https://github.com/GuillermoTeran/Analisis-de-eficiencia-de-marketing-y-comportamiento-de-clientes-Proyecto-para-Showz" target="_blank">Ver en GitHub</a>
-      <img src="https://source.unsplash.com/featured/?marketing,analytics" alt="Proyecto Showz">
-    </div>
-
-  </section>
-
-  <section id="dashboards">
-    <h2>Dashboards</h2>
-    <div class="project">
-      <h3>Caso de Estudio: Dashboard de tendencias de videos en YouTube</h3>
-      <p>Dashboard interactivo para identificar categorías de videos en tendencia y apoyar estrategias de marketing.</p>
-      <a href="https://github.com/GuillermoTeran/-Caso-de-Estudio-Dashboard-de-Tendencias-de-Videos-en-YouTube" target="_blank">Ver en GitHub</a>
-      <img src="https://source.unsplash.com/featured/?youtube,dashboard" alt="Dashboard YouTube">
-    </div>
-  </section>
-
-  <footer>
-    <h2>¿Contáctame?</h2>
-    <a href="mailto:teranguillermo59@gmail.com" style="color:white; display:inline-block; margin:10px;">teranguillermo59@gmail.com</a>
-    <a href="https://www.linkedin.com/in/guillermo-teran" target="_blank" style="color:white; display:inline-block; margin:10px
+    // Mostrar todos al cargar
+    mostrarProyectos(proyectos);
+  </script>
+</body>
+</html>
