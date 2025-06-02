@@ -6,7 +6,7 @@ const proyectos = [
     descripcion: "Desarrollé un modelo predictivo para identificar clientes con alto riesgo de cancelación y una segmentación de usuarios para diseñar estrategias personalizadas de retención.",
     herramientas: "Python, Jupyter Notebook, scikit-learn, seaborn",
     github: "https://github.com/GuillermoTeran/Prediccion-de-cancelacion-de-clientes-y-segmentacion-de-usuarios-Proyecto-para-Model-Fitness",
-    imagen: "images/proyecto1.jpg"
+    imagen: "images/proyecto1.webp"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const proyectos = [
     descripcion: "Automatización del análisis de categorías en tendencia en YouTube mediante Tableau Public.",
     herramientas: "Tableau Public, Python, PostgreSQL",
     github: "https://github.com/GuillermoTeran/-Caso-de-Estudio-Dashboard-de-Tendencias-de-Videos-en-YouTube",
-    imagen: "images/proyecto2.jpg"
+    imagen: "images/proyecto2.webp"
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const proyectos = [
     descripcion: "Comprensión de cómo el diseño de la app afecta el comportamiento del usuario y conversión de ventas.",
     herramientas: "Python, Jupyter Notebook, statsmodels",
     github: "https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-usuario-y-test-A-A-B-en-una-app-de-productos-alimenticios",
-    imagen: "images/proyecto3.jpg"
+    imagen: "images/proyecto3.webp"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const proyectos = [
     descripcion: "Estudio de comportamiento de lectores a partir de base de datos de una startup editorial durante COVID-19.",
     herramientas: "SQL (PostgreSQL), Python",
     github: "https://github.com/GuillermoTeran/Caso-de-Estudio-SQL-Analisis-del-Comportamiento-de-Lectores-Durante-la-Pandemia",
-    imagen: "images/proyecto4.jpg"
+    imagen: "images/proyecto4.webp"
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const proyectos = [
     descripcion: "Análisis exploratorio para identificar operadores con bajo rendimiento en atención al cliente.",
     herramientas: "Python, pruebas estadísticas, visualización",
     github: "https://github.com/GuillermoTeran/Caso-de-Estudio-Deteccion-de-Operadores-Ineficaces-en-un-Servicio-de-Telefonia-Virtual",
-    imagen: "images/proyecto5.jpg"
+    imagen: "images/proyecto5.webp"
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ const proyectos = [
     descripcion: "Identificación de patrones clave en datos de transporte urbano para Zuber.",
     herramientas: "Python, SQL (PostgreSQL), visualización",
     github: "https://github.com/GuillermoTeran/Analisis-de-datos-para-Zuber-Comportamiento-de-viajes-compartidos-en-Chicago",
-    imagen: "images/proyecto6.jpg"
+    imagen: "images/proyecto6.webp"
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ const proyectos = [
     descripcion: "Comparación de rendimiento de planes prepago para mejorar inversión publicitaria.",
     herramientas: "Python, análisis estadístico",
     github: "https://github.com/GuillermoTeran/Analisis-de-tarifas-prepago---Proyecto-Megaline",
-    imagen: "images/proyecto7.jpg"
+    imagen: "images/proyecto7.webp"
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ const proyectos = [
     descripcion: "Detección de patrones que determinan el éxito de videojuegos para optimización de campañas.",
     herramientas: "Python, visualización de datos",
     github: "https://github.com/GuillermoTeran/Analisis-de-ventas-de-videojuegos-y-deteccion-de-patrones-de-exito-Proyecto-Ice-Games",
-    imagen: "images/proyecto8.jpg"
+    imagen: "images/proyecto8.webp"
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ const proyectos = [
     descripcion: "Análisis de hipótesis y prueba A/B para aumentar ingresos en tienda online.",
     herramientas: "Python, estadísticas, visualización",
     github: "https://github.com/GuillermoTeran/Priorizacion-de-hipotesis-y-analisis-de-prueba-A-B-para-optimizacion-de-ingresos---Proyecto-de-Ecome",
-    imagen: "images/proyecto9.jpg"
+    imagen: "images/proyecto9.webp"
   },
   {
     id: 10,
@@ -87,7 +87,7 @@ const proyectos = [
     descripcion: "Estudio del comportamiento de compra de clientes con fines educativos para Instacart.",
     herramientas: "Python, EDA, segmentación",
     github: "https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-compra-de-clientes-Proyecto-Instacart",
-    imagen: "images/proyecto10.jpg"
+    imagen: "images/proyecto10.webp"
   },
   {
     id: 11,
@@ -96,7 +96,7 @@ const proyectos = [
     descripcion: "Evaluación del retorno de inversión y comportamiento de usuarios en plataforma de venta de entradas.",
     herramientas: "Python, marketing analytics, cohortes",
     github: "https://github.com/GuillermoTeran/Analisis-de-eficiencia-de-marketing-y-comportamiento-de-clientes-Proyecto-para-Showz",
-    imagen: "images/proyecto11.jpg"
+    imagen: "images/proyecto11.webp"
   }
 ];
 
