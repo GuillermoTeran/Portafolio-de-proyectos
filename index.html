@@ -2,77 +2,51 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guillermo Teran – Analista de Datos</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guillermo Teran - Portafolio</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-  <!-- Sección 1: Datos personales -->
-  <header class="perfil">
-    <img src="images/profile.jpg" alt="Foto de perfil de Guillermo Teran" class="foto-perfil" />
-    <div class="info-personal">
+
+  <!-- Perfil -->
+  <section class="perfil">
+    <div class="tarjeta-perfil">
+      <img src="images/profile.jpg" alt="Foto de perfil" class="foto-perfil"/>
       <h1>Guillermo Teran</h1>
       <h2>Analista de Datos</h2>
       <p><strong>Teléfono:</strong> +351 961 900 127</p>
       <p><strong>Ubicación:</strong> Fátima – Portugal</p>
-      <p class="descripcion">
-        Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranzas y desarrollo de KPI’s, apasionado por la transformación de datos en información valiosa para la toma de decisiones estratégicas. Cuento con habilidades en herramientas como Excel avanzado, SQL, Python y Tableau lo que me permite extraer, limpiar y visualizar datos de manera eficiente. Busco una oportunidad para aplicar mis habilidades de Python y contribuir a la optimización de procesos analíticos mediante la generación de informes estratégicos y la mejora en la toma de decisiones basadas en datos.
+      <p>
+        Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranzas y desarrollo de KPI’s, apasionado por la transformación de datos en información valiosa para la toma de decisiones estratégicas.
+        Cuento con habilidades en herramientas como Excel avanzado, SQL, Python y Tableau lo que me permite extraer, limpiar y visualizar datos de manera eficiente.
+        Busco una oportunidad para aplicar mis habilidades de Python y contribuir a la optimización de procesos analíticos mediante la generación de informes estratégicos y la mejora en la toma de decisiones basadas en datos.
       </p>
-      <p class="aficiones">
-        <strong>Aficiones:</strong> Caminar al aire libre y disfrutar de la naturaleza, leer artículos sobre política, negocios y tecnología, ver partidos de fútbol y tennis.
-      </p>
+      <p><strong>Aficiones:</strong> Caminar al aire libre y disfrutar de la naturaleza, leer artículos sobre política, negocios y tecnología, ver partidos de fútbol y tenis.</p>
     </div>
-  </header>
+  </section>
 
-  <!-- Sección 2: Portafolio de Proyectos -->
-  <main class="proyectos">
+  <!-- Portafolio -->
+  <section id="portafolio">
     <h2>Portafolio de Proyectos</h2>
-    <div class="filtros">
-      <button onclick="filtrarProyectos('todos')">Todos</button>
-      <button onclick="filtrarProyectos('dashboard')">Dashboards</button>
-      <button onclick="filtrarProyectos('analisis')">Análisis de Datos</button>
+    <div class="botones-categorias">
+      <button class="btn-filtro activo" data-categoria="todos">Todos</button>
+      <button class="btn-filtro" data-categoria="dashboard">Dashboards</button>
+      <button class="btn-filtro" data-categoria="analisis">Análisis de Datos</button>
     </div>
-    <div id="contenedor-proyectos" class="contenedor-proyectos"></div>
-  </main>
+    <div id="proyectos-container" class="grid-proyectos"></div>
+  </section>
 
-  <!-- Sección 3: Contacto -->
-  <footer class="contacto">
-    <h2>Contacto</h2>
-    <p><strong>Correo:</strong> <a href="mailto:teranguillermo59@gmail.com">teranguillermo59@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/guillermo-teran" target="_blank">www.linkedin.com/in/guillermo-teran</a></p>
-  </footer>
+  <!-- Contacto -->
+  <section id="contacto">
+    <div class="tarjeta-contacto">
+      <h2>Contacto</h2>
+      <p><strong>Correo:</strong> <a href="mailto:teranguillermo59@gmail.com">teranguillermo59@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/guillermo-teran" target="_blank">www.linkedin.com/in/guillermo-teran</a></p>
+    </div>
+  </section>
 
-  <script src="proyectos.js"></script>
-  <script>
-    const contenedor = document.getElementById("contenedor-proyectos");
-
-    function mostrarProyectos(filtrados) {
-      contenedor.innerHTML = "";
-      filtrados.forEach(proyecto => {
-        const div = document.createElement("div");
-        div.className = "proyecto";
-        div.innerHTML = `
-          <img src="${proyecto.imagen}" alt="${proyecto.titulo}" />
-          <h3>${proyecto.titulo}</h3>
-          <p>${proyecto.descripcion}</p>
-          <p><strong>Herramientas:</strong> ${proyecto.herramientas}</p>
-          <a href="${proyecto.github}" target="_blank">Ver en GitHub</a>
-        `;
-        contenedor.appendChild(div);
-      });
-    }
-
-    function filtrarProyectos(categoria) {
-      if (categoria === "todos") {
-        mostrarProyectos(proyectos);
-      } else {
-        const filtrados = proyectos.filter(p => p.categoria === categoria);
-        mostrarProyectos(filtrados);
-      }
-    }
-
-    // Mostrar todos al cargar
-    mostrarProyectos(proyectos);
-  </script>
+  <!-- Scripts -->
+  <script src="js/proyectos.js"></script>
+  <script src="js/render.js"></script>
 </body>
 </html>
