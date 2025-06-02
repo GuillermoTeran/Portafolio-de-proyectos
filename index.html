@@ -47,6 +47,39 @@
 
   <!-- Scripts -->
   <script src="js/proyectos.js"></script>
-  <script src="js/render.js"></script>
+  <script>
+    const contenedor = document.getElementById("proyectos-container");
+    const filtros = document.querySelectorAll(".btn-filtro");
+
+    function renderProyectos(filtro = "todos") {
+      contenedor.innerHTML = "";
+      const filtrados = filtro === "todos" ? proyectos : proyectos.filter(p => p.categoria === filtro);
+
+      filtrados.forEach(p => {
+        const proyecto = document.createElement("div");
+        proyecto.classList.add("proyecto");
+
+        proyecto.innerHTML = `
+          <img src="${p.imagen}" alt="${p.titulo}">
+          <h3>${p.titulo}</h3>
+          <p>${p.descripcion}</p>
+          <p class="herramientas"><strong>Herramientas:</strong> ${p.herramientas}</p>
+          <a href="${p.github}" target="_blank">Ver en GitHub</a>
+        `;
+
+        contenedor.appendChild(proyecto);
+      });
+    }
+
+    renderProyectos();
+
+    filtros.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filtros.forEach(b => b.classList.remove("activo"));
+        btn.classList.add("activo");
+        renderProyectos(btn.dataset.categoria);
+      });
+    });
+  </script>
 </body>
 </html>
