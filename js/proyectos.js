@@ -14,6 +14,7 @@ const proyectos = [
     titulo: "Caso de Estudio: Dashboard de Tendencias de Videos en YouTube",
     descripcion: "Automatización del análisis de categorías en tendencia en YouTube mediante Tableau Public.",
     herramientas: "Tableau Public, Python, PostgreSQL",
+    tableu: "https://public.tableau.com/views/Libro1_17212954380800/Dashboard1?:language=es-ES&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
     github: "https://github.com/GuillermoTeran/-Caso-de-Estudio-Dashboard-de-Tendencias-de-Videos-en-YouTube",
     imagen: "images/proyecto2.webp"
   },
