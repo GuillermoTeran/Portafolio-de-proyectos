@@ -1,98 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Guillermo Teran - Portafolio</title>
-  <link rel="stylesheet" href="css/style.css"/>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio de Proyectos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Portafolio de Proyectos</h1>
+    </header>
+    <main>
+      <section id="projects-container">
+        <!-- Proyecto 1 -->
+        <article class="project">
+          <h2>Proyecto 1</h2>
+          <p>Descripción del proyecto 1.</p>
+          <a href="#">Ver en GitHub</a>
+        </article>
 
-  <!-- Perfil -->
-  <section class="perfil">
-    <div class="tarjeta-perfil">
-      <img src="images/profile.webp" alt="Foto de perfil" class="foto-perfil"/>
-      <div class="info-perfil">
-        <h1>Guillermo Teran</h1>
-        <h2>Analista de Datos</h2>
-        <p><strong>Teléfono:</strong> +351 961 900 127</p>
-        <p><strong>Ubicación:</strong> Fátima – Portugal</p>
-        <p>
-          Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranzas y desarrollo de KPI’s, apasionado por la transformación de datos en información valiosa para la toma de decisiones estratégicas.
-          Cuento con habilidades en herramientas como Excel avanzado, SQL, Python y Tableau lo que me permite extraer, limpiar y visualizar datos de manera eficiente.
-          Busco una oportunidad para aplicar mis habilidades de Python y contribuir a la optimización de procesos analíticos mediante la generación de informes estratégicos y la mejora en la toma de decisiones basadas en datos.
-        </p>
-        <p><strong>Aficiones:</strong> Caminar al aire libre y disfrutar de la naturaleza, leer artículos sobre política, negocios y tecnología, ver partidos de fútbol y tenis.</p>
-      </div>
-    </div>
-  </section>
+        <!-- Proyecto 2 -->
+        <article class="project">
+          <h2>Proyecto 2</h2>
+          <p>Descripción del proyecto 2.</p>
+          <a href="#">Ver en GitHub</a>
+        </article>
 
-  <!-- Video de presentación -->
-<section class="video-presentacion">
-  <h2>🎥 Video de Presentación</h2>
-  <p>Conóceme un poco más a través de este video de presentación personal.</p>
+        <!-- Proyecto 3 -->
+        <article class="project">
+          <h2>Proyecto 3</h2>
+          <p>Descripción del proyecto 3.</p>
+          <a href="#">Ver en GitHub</a>
+        </article>
 
-  <video controls>
-    <source src="Video%20CV%20Guillermo%20Teran.mp4" type="video/mp4">
-    Tu navegador no soporta la reproducción de video.
-  </video>
-</section>
+        <!-- Proyecto 4 -->
+        <article class="project">
+          <h2>Proyecto 4</h2>
+          <p>Descripción del proyecto 4.</p>
+          <a href="#">Ver en GitHub</a>
+        </article>
 
-  <!-- Portafolio -->
-  <section id="portafolio">
-    <h2>Portafolio de Proyectos</h2>
-    <div class="botones-categorias">
-      <button class="btn-filtro activo" data-categoria="todos">Todos</button>
-      <button class="btn-filtro" data-categoria="dashboard">Dashboards</button>
-      <button class="btn-filtro" data-categoria="analisis">Análisis de Datos</button>
-    </div>
-    <div id="proyectos-container" class="grid-proyectos"></div>
-  </section>
+        <!-- Proyecto 5 -->
+        <article class="project">
+          <h2>Proyecto 5</h2>
+          <p>Descripción del proyecto 5.</p>
+          <a href="#">Ver en GitHub</a>
+        </article>
 
-<!-- Contacto -->
-<section id="contacto">
-  <div class="tarjeta-contacto">
-    <h2>Contacto</h2>
-    <a href="mailto:teranguillermo59@gmail.com">teranguillermo59@gmail.com</a>
-    <a href="https://www.linkedin.com/in/guillermo-teran" target="_blank">LinkedIn</a>
-  </div>
-</section>
+        <!-- Proyecto 6 -->
+        <article class="project">
+          <h2>Proyecto 6</h2>
+          <p>Descripción del proyecto 6.</p>
+          <a href="#">Ver en GitHub</a>
+        </article>
 
-  <!-- Scripts -->
-  <script src="js/proyectos.js"></script>
-  <script>
-    const contenedor = document.getElementById("proyectos-container");
-    const filtros = document.querySelectorAll(".btn-filtro");
+        <!-- Proyecto 7 -->
+        <article class="project">
+          <h2>Proyecto 7</h2>
+          <p>Descripción del proyecto 7.</p>
+          <a href="#">Ver en GitHub</a>
+        </article>
 
-    function renderProyectos(filtro = "todos") {
-      contenedor.innerHTML = "";
-      const filtrados = filtro === "todos" ? proyectos : proyectos.filter(p => p.categoria === filtro);
+        <!-- Proyecto 8 -->
+        <article class="project">
+          <h2>Proyecto 8</h2>
+          <p>Descripción del proyecto 8.</p>
+          <a href="#">Ver en GitHub</a>
+        </article>
 
-      filtrados.forEach(p => {
-        const proyecto = document.createElement("div");
-        proyecto.classList.add("proyecto");
+        <!-- Proyecto 9 -->
+        <article class="project">
+          <h2>Proyecto 9</h2>
+          <p>Descripción del proyecto 9.</p>
+          <a href="#">Ver en GitHub</a>
+        </article>
 
-        proyecto.innerHTML = `
-          <img src="${p.imagen}" alt="${p.titulo}">
-          <h3>${p.titulo}</h3>
-          <p>${p.descripcion}</p>
-          <p class="herramientas"><strong>Herramientas:</strong> ${p.herramientas}</p>
-          <a href="${p.github}" target="_blank">Ver en GitHub</a>
-        `;
+        <!-- Proyecto 10 -->
+        <article class="project">
+          <h2>Proyecto 10</h2>
+          <p>Descripción del proyecto 10.</p>
+          <a href="#">Ver en GitHub</a>
+        </article>
 
-        contenedor.appendChild(proyecto);
-      });
-    }
+        <!-- Proyecto 11 -->
+        <article class="project">
+          <h2>Proyecto 11</h2>
+          <p>Descripción del proyecto 11.</p>
+          <a href="#">Ver en GitHub</a>
+        </article>
 
-    renderProyectos();
+        <!-- Proyecto 12 -->
+        <article class="project">
+          <h2>Proyecto 12</h2>
+          <p>Descripción del proyecto 12.</p>
+          <a href="#">Ver en GitHub</a>
+        </article>
 
-    filtros.forEach(btn => {
-      btn.addEventListener("click", () => {
-        filtros.forEach(b => b.classList.remove("activo"));
-        btn.classList.add("activo");
-        renderProyectos(btn.dataset.categoria);
-      });
-    });
-  </script>
-</body>
+        <!-- Proyecto 13 -->
+        <article class="project">
+          <h2>Proyecto 13</h2>
+          <p>Descripción del proyecto 13.</p>
+          <a href="#">Ver en GitHub</a>
+        </article>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
 </html>
+
