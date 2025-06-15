@@ -170,4 +170,32 @@ h2 {
     width: 100%;
     max-width: 250px;
   }
+
+/* Video de Presentación */
+.video-presentacion {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #fff;
+  margin: 2rem auto;
+}
+
+.video-presentacion h2 {
+  color: #333;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.video-presentacion p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.video-presentacion video {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ }
 }
