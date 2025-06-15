@@ -98,6 +98,25 @@ const proyectos = [
     herramientas: "Python, marketing analytics, cohortes",
     github: "https://github.com/GuillermoTeran/Analisis-de-eficiencia-de-marketing-y-comportamiento-de-clientes-Proyecto-para-Showz",
     imagen: "images/proyecto11.webp"
-  }
+  },
+  {
+    id: 12,
+    categoria: "dashboard",
+    titulo: "Caso de Estudio Dashboard de Ventas Productos Agroquimicos",
+    descripcion: "Análisis de ventas mensuales de productos agroquímicos en dos locales mediante Tableau Public.",
+    herramientas: "Tableau Public, Excel",
+    tableu: "https://public.tableau.com/app/profile/guillermo.teran3150/viz/DashboardProductosAgroquimicos/DashboardVentasProductosAgroquimicos?publish=yes",
+    github: "https://github.com/GuillermoTeran/Caso-de-Estudio-Dashboard-Productos-Agroquimicos",
+    imagen: "images/proyecto12.webp"
+  },
+  {
+    id: 13,
+    categoria: "dashboard",
+    titulo: "Caso de Estudio Dashboard Ingresos y Descuentos Salon de Belleza",
+    descripcion: "Análisis de una base de datos transaccional con operaciones diarias, incluyendo ingresos por productos y servicios, descuentos aplicados, tipos de pago, y gastos operativos.",
+    herramientas: "Excel",
+    github: "https://github.com/GuillermoTeran/Caso-de-Estudio-Dashboard-Ingresos-y-Descuentos-Salon-de-Belleza-",
+    imagen: "images/proyecto13.webp"
+  },  
 ];
 
