@@ -98,8 +98,8 @@ const proyectos = [
     categoria: "análisis de datos"
   },
   {
-    titulo: "",
-    descripcion: "Análisis de datos para Zuber: Comportamiento de viajes compartidos en Chicago.",
+    titulo: "Análisis de datos para Zuber: Comportamiento de viajes compartidos en Chicago",
+    descripcion: "Identificación de patrones claves en los datos de transporte urbano.",
     herramientas: "PostgreSQL (consultas complejas y agrupación de datos), Python (pandas, matplotlib, seaborn, scipy)",
     imagen: "proyecto6.webp",
     enlace: "https://github.com/GuillermoTeran/Analisis-de-datos-para-Zuber-Comportamiento-de-viajes-compartidos-en-Chicago",
