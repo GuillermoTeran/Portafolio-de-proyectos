@@ -5,10 +5,8 @@ body {
   padding: 0;
   background-color: #f8f9fa;
   color: #333;
-  line-height: 1.6;
 }
 
-/* Sección de perfil */
 .perfil {
   padding: 2rem;
   background-color: #ffffff;
@@ -33,35 +31,32 @@ body {
 }
 
 .descripcion-aficiones {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   max-width: 100%;
 }
 
-/* Video CV */
+.descripcion-aficiones p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
 .video-cv {
   margin-top: 2rem;
   text-align: center;
 }
 
 .video-cv h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.contenedor-video {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-}
-
-.contenedor-video video {
+.video-cv video {
   width: 100%;
   max-width: 720px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Sección portafolio */
+/* Portafolio */
 #portafolio {
   padding: 2rem;
   background-color: #eef2f5;
@@ -115,7 +110,7 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Sección contacto */
+/* Contacto */
 #contacto {
   padding: 2rem;
   background-color: #ffffff;
