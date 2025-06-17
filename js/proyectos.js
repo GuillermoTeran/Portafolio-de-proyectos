@@ -4,91 +4,104 @@ const proyectos = [
     descripcion: "Descripción del proyecto 1.",
     imagen: "images/proyecto1.webp",
     enlace: "#",
-    categoria: "dashboard"
+    categoria: "dashboard",
+    herramientas: "Power BI, Excel"
   },
   {
     titulo: "Proyecto 2",
     descripcion: "Descripción del proyecto 2.",
     imagen: "images/proyecto2.webp",
     enlace: "#",
-    categoria: "analisis"
+    categoria: "analisis",
+    herramientas: "Python, Pandas"
   },
   {
     titulo: "Proyecto 3",
     descripcion: "Descripción del proyecto 3.",
     imagen: "images/proyecto3.webp",
     enlace: "#",
-    categoria: "dashboard"
+    categoria: "dashboard",
+    herramientas: "Tableau, SQL"
   },
   {
     titulo: "Proyecto 4",
     descripcion: "Descripción del proyecto 4.",
     imagen: "images/proyecto4.webp",
     enlace: "#",
-    categoria: "analisis"
+    categoria: "analisis",
+    herramientas: "Excel, Power Query"
   },
   {
     titulo: "Proyecto 5",
     descripcion: "Descripción del proyecto 5.",
     imagen: "images/proyecto5.webp",
     enlace: "#",
-    categoria: "dashboard"
+    categoria: "dashboard",
+    herramientas: "Google Data Studio"
   },
   {
     titulo: "Proyecto 6",
     descripcion: "Descripción del proyecto 6.",
     imagen: "images/proyecto6.webp",
     enlace: "#",
-    categoria: "analisis"
+    categoria: "analisis",
+    herramientas: "Python, Matplotlib"
   },
   {
     titulo: "Proyecto 7",
     descripcion: "Descripción del proyecto 7.",
     imagen: "images/proyecto7.webp",
     enlace: "#",
-    categoria: "dashboard"
+    categoria: "dashboard",
+    herramientas: "Looker Studio, SQL"
   },
   {
     titulo: "Proyecto 8",
     descripcion: "Descripción del proyecto 8.",
     imagen: "images/proyecto8.webp",
     enlace: "#",
-    categoria: "analisis"
+    categoria: "analisis",
+    herramientas: "Excel avanzado"
   },
   {
     titulo: "Proyecto 9",
     descripcion: "Descripción del proyecto 9.",
     imagen: "images/proyecto9.webp",
     enlace: "#",
-    categoria: "dashboard"
+    categoria: "dashboard",
+    herramientas: "Power BI"
   },
   {
     titulo: "Proyecto 10",
     descripcion: "Descripción del proyecto 10.",
     imagen: "images/proyecto10.webp",
     enlace: "#",
-    categoria: "analisis"
+    categoria: "analisis",
+    herramientas: "Python, Jupyter"
   },
   {
     titulo: "Proyecto 11",
     descripcion: "Descripción del proyecto 11.",
     imagen: "images/proyecto11.webp",
     enlace: "#",
-    categoria: "dashboard"
+    categoria: "dashboard",
+    herramientas: "Excel, VBA"
   },
   {
     titulo: "Proyecto 12",
     descripcion: "Dashboard interactivo para el análisis de productos agroquímicos, con métricas clave y filtros dinámicos.",
     imagen: "images/proyecto12.webp",
     enlace: "#",
-    categoria: "dashboard"
+    categoria: "dashboard",
+    herramientas: "Power BI, SQL Server"
   },
   {
     titulo: "Proyecto 13",
     descripcion: "Dashboard para ingresos y descuentos de un salón de belleza. Permite análisis mensual y por categoría.",
     imagen: "images/proyecto13.webp",
     enlace: "#",
-    categoria: "dashboard"
+    categoria: "dashboard",
+    herramientas: "Excel, Power Query"
   }
 ];
 
@@ -107,6 +120,7 @@ function mostrarProyectos(categoria) {
       <img src="${p.imagen}" alt="${p.titulo}" />
       <h3>${p.titulo}</h3>
       <p>${p.descripcion}</p>
+      <p class="herramientas"><strong>Herramientas:</strong> ${p.herramientas}</p>
       <a href="${p.enlace}" target="_blank">Ver en GitHub</a>
     `;
     contenedor.appendChild(div);
