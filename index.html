@@ -10,24 +10,36 @@
 
   <!-- Perfil -->
   <section class="perfil">
-    <img src="images/profile.webp" alt="Foto de perfil" class="foto-perfil"/>
-    <h1 class="nombre">Guillermo Teran</h1>
-    <h2 class="titulo">Analista de Datos</h2>
-    <p class="info-contacto">📞 +351 961 900 127 | 📍 Fátima – Portugal</p>
-  </section>
+    <div class="tarjeta-perfil">
+      <img src="images/profile.webp" alt="Foto de perfil" class="foto-perfil"/>
+      <div class="info-perfil">
+        <h1>Guillermo Teran</h1>
+        <h2>Analista de Datos</h2>
+        <p><strong>Teléfono:</strong> +351 961 900 127</p>
+        <p><strong>Ubicación:</strong> Fátima – Portugal</p>
+      </div>
+    </div>
 
-  <!-- Descripción -->
-  <section class="descripcion">
-    <p>
-      Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranzas y desarrollo de KPI’s, apasionado por la transformación de datos en información valiosa para la toma de decisiones estratégicas. Cuento con habilidades en herramientas como Excel avanzado, SQL, Python y Tableau lo que me permite extraer, limpiar y visualizar datos de manera eficiente.
-      Busco una oportunidad para aplicar mis habilidades de Python y contribuir a la optimización de procesos analíticos mediante la generación de informes estratégicos y la mejora en la toma de decisiones basadas en datos.
-    </p>
-    <p><strong>Aficiones:</strong> Caminar al aire libre y disfrutar de la naturaleza, leer artículos sobre política, negocios y tecnología, ver partidos de fútbol y tenis.</p>
-  </section>
+    <!-- Descripción, aficiones y video -->
+    <div class="descripcion-aficiones">
+      <p>
+        Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranzas y desarrollo de KPI’s, apasionado por la transformación de datos en información valiosa para la toma de decisiones estratégicas. Cuento con habilidades en herramientas como Excel avanzado, SQL, Python y Tableau lo que me permite extraer, limpiar y visualizar datos de manera eficiente.
+        Busco una oportunidad para aplicar mis habilidades de Python y contribuir a la optimización de procesos analíticos mediante la generación de informes estratégicos y la mejora en la toma de decisiones basadas en datos.
+      </p>
+      <p><strong>Aficiones:</strong> Caminar al aire libre y disfrutar de la naturaleza, leer artículos sobre política, negocios y tecnología, ver partidos de fútbol y tenis.</p>
 
-  <!-- Video CV -->
-  <section class="video-cv">
-    <video src="Video CV Guillermo Teran.mp4" controls></video>
+      <!-- Video CV -->
+      <div class="video-cv">
+        <h3>Video CV</h3>
+        <p>Conóceme en menos de 2 minutos:</p>
+        <div class="contenedor-video">
+          <video controls>
+            <source src="Video CV Guillermo Teran.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Portafolio -->
@@ -43,9 +55,11 @@
 
   <!-- Contacto -->
   <section id="contacto">
-    <h2>Contacto</h2>
-    <a href="mailto:teranguillermo59@gmail.com">teranguillermo59@gmail.com</a>
-    <a href="https://www.linkedin.com/in/guillermo-teran" target="_blank">LinkedIn</a>
+    <div class="tarjeta-contacto">
+      <h2>Contacto</h2>
+      <a href="mailto:teranguillermo59@gmail.com">teranguillermo59@gmail.com</a>
+      <a href="https://www.linkedin.com/in/guillermo-teran" target="_blank">LinkedIn</a>
+    </div>
   </section>
 
   <script src="projects.js"></script>
@@ -64,11 +78,11 @@
         const div = document.createElement("div");
         div.classList.add("proyecto");
         div.innerHTML = `
-          <img src="images/${p.imagen}" alt="${p.titulo}" class="imagen-proyecto" />
+          <img src="images/${p.imagen}" alt="${p.titulo}" class="imagen-proyecto"/>
           <h3>${p.titulo}</h3>
           <p>${p.descripcion}</p>
           <p><strong>Herramientas:</strong> ${p.herramientas}</p>
-          <a href="${p.enlace}" target="_blank" class="boton-proyecto">Ver proyecto en GitHub</a>
+          <a href="${p.enlace}" target="_blank">Ver proyecto</a>
         `;
         contenedor.appendChild(div);
       });
