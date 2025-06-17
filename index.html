@@ -17,25 +17,15 @@
         <h2>Analista de Datos</h2>
         <p><strong>Teléfono:</strong> +351 961 900 127</p>
         <p><strong>Ubicación:</strong> Fátima – Portugal</p>
-        <p>
-          Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranzas y desarrollo de KPI’s, apasionado por la transformación de datos en información valiosa para la toma de decisiones estratégicas.
-          Cuento con habilidades en herramientas como Excel avanzado, SQL, Python y Tableau lo que me permite extraer, limpiar y visualizar datos de manera eficiente.
-          Busco una oportunidad para aplicar mis habilidades de Python y contribuir a la optimización de procesos analíticos mediante la generación de informes estratégicos y la mejora en la toma de decisiones basadas en datos.
-        </p>
-        <p><strong>Aficiones:</strong> Caminar al aire libre y disfrutar de la naturaleza, leer artículos sobre política, negocios y tecnología, ver partidos de fútbol y tenis.</p>
       </div>
     </div>
-  </section>
-
-  <!-- Video de presentación -->
-  <section class="video-presentacion">
-    <h2>🎥 Video de Presentación</h2>
-    <p>Conóceme un poco más a través de este video de presentación personal.</p>
-    <div class="video-wrapper">
-      <video controls>
-        <source src="Video CV Guillermo Teran.mp4" type="video/mp4">
-        Tu navegador no soporta la reproducción de video.
-      </video>
+    <div class="descripcion-perfil">
+      <p>
+        Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranzas y desarrollo de KPI’s, apasionado por la transformación de datos en información valiosa para la toma de decisiones estratégicas.
+        Cuento con habilidades en herramientas como Excel avanzado, SQL, Python y Tableau lo que me permite extraer, limpiar y visualizar datos de manera eficiente.
+        Busco una oportunidad para aplicar mis habilidades de Python y contribuir a la optimización de procesos analíticos mediante la generación de informes estratégicos y la mejora en la toma de decisiones basadas en datos.
+      </p>
+      <p><strong>Aficiones:</strong> Caminar al aire libre y disfrutar de la naturaleza, leer artículos sobre política, negocios y tecnología, ver partidos de fútbol y tenis.</p>
     </div>
   </section>
 
@@ -44,8 +34,8 @@
     <h2>Portafolio de Proyectos</h2>
     <div class="botones-categorias">
       <button class="btn-filtro activo" data-categoria="todos">Todos</button>
-      <button class="btn-filtro" data-categoria="dashboard">Dashboards</button>
-      <button class="btn-filtro" data-categoria="analisis">Análisis de Datos</button>
+      <button class="btn-filtro" data-categoria="análisis de datos">Análisis de Datos</button>
+      <button class="btn-filtro" data-categoria="dashboards">Dashboards</button>
     </div>
     <div id="proyectos-container" class="grid-proyectos"></div>
   </section>
@@ -60,5 +50,36 @@
   </section>
 
   <script src="js/projects.js"></script>
+  <script>
+    const contenedor = document.getElementById('proyectos-container');
+    const botones = document.querySelectorAll('.btn-filtro');
+
+    function renderizarProyectos(categoria) {
+      contenedor.innerHTML = '';
+      const filtrados = categoria === 'todos' ? proyectos : proyectos.filter(p => p.categoria === categoria);
+      filtrados.forEach(proyecto => {
+        const div = document.createElement('div');
+        div.className = 'proyecto';
+        div.innerHTML = `
+          <img src="images/${proyecto.imagen}" alt="${proyecto.titulo}" class="imagen-proyecto"/>
+          <h3>${proyecto.titulo}</h3>
+          <p>${proyecto.descripcion}</p>
+          <p><strong>Herramientas:</strong> ${proyecto.herramientas}</p>
+          <a href="${proyecto.enlace}" target="_blank">Ver proyecto</a>
+        `;
+        contenedor.appendChild(div);
+      });
+    }
+
+    botones.forEach(btn => {
+      btn.addEventListener('click', () => {
+        botones.forEach(b => b.classList.remove('activo'));
+        btn.classList.add('activo');
+        renderizarProyectos(btn.dataset.categoria);
+      });
+    });
+
+    renderizarProyectos('todos');
+  </script>
 </body>
 </html>
