@@ -1,138 +1,108 @@
 const proyectos = [
   {
-    titulo: "Proyecto 1",
-    descripcion: "Descripción del proyecto 1.",
-    imagen: "images/proyecto1.webp",
-    enlace: "#",
-    categoria: "dashboard",
-    herramientas: "Power BI, Excel"
+    titulo: "Predicción de cancelación de clientes y segmentación de usuarios — Model Fitness",
+    descripcion: "Modelo predictivo y segmentación de clientes para reducir rotación en una cadena de gimnasios.",
+    herramientas: "Python, scikit-learn, Jupyter Notebook",
+    imagen: "proyecto5.webp",
+    enlace: "https://github.com/GuillermoTeran/Prediccion-de-cancelacion-de-clientes-y-segmentacion-de-usuarios-Proyecto-para-Model-Fitness",
+    categoria: "análisis de datos"
   },
   {
-    titulo: "Proyecto 2",
-    descripcion: "Descripción del proyecto 2.",
-    imagen: "images/proyecto2.webp",
-    enlace: "#",
-    categoria: "analisis",
-    herramientas: "Python, Pandas"
+    titulo: "Detección de operadores ineficaces — Telefonía Virtual",
+    descripcion: "Análisis para identificar operadores con bajo rendimiento.",
+    herramientas: "Python, SciPy, Seaborn",
+    imagen: "proyecto7.webp",
+    enlace: "https://github.com/GuillermoTeran/Caso-de-Estudio-Deteccion-de-Operadores-Ineficaces-en-un-Servicio-de-Telefonia-Virtual",
+    categoria: "análisis de datos"
   },
   {
-    titulo: "Proyecto 3",
-    descripcion: "Descripción del proyecto 3.",
-    imagen: "images/proyecto3.webp",
-    enlace: "#",
-    categoria: "dashboard",
-    herramientas: "Tableau, SQL"
+    titulo: "Análisis de comportamiento y test A/A/B — App de alimentos",
+    descripcion: "Evaluación de comportamiento de usuarios y pruebas estadísticas para una app de alimentos.",
+    herramientas: "Python, statsmodels, visualización",
+    imagen: "proyecto10.webp",
+    enlace: "https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-usuario-y-test-A-A-B-en-una-app-de-productos-alimenticios",
+    categoria: "análisis de datos"
   },
   {
-    titulo: "Proyecto 4",
-    descripcion: "Descripción del proyecto 4.",
-    imagen: "images/proyecto4.webp",
-    enlace: "#",
-    categoria: "analisis",
-    herramientas: "Excel, Power Query"
+    titulo: "Análisis de tarifas prepago — Megaline",
+    descripcion: "Comparación entre planes prepago para evaluar rendimiento económico.",
+    herramientas: "Python, Pandas, EDA",
+    imagen: "proyecto3.webp",
+    enlace: "https://github.com/GuillermoTeran/Analisis-de-tarifas-prepago---Proyecto-Megaline",
+    categoria: "análisis de datos"
   },
   {
-    titulo: "Proyecto 5",
-    descripcion: "Descripción del proyecto 5.",
-    imagen: "images/proyecto5.webp",
-    enlace: "#",
-    categoria: "dashboard",
-    herramientas: "Google Data Studio"
+    titulo: "Análisis de optimización de ingresos — Ecommerce",
+    descripcion: "Priorización de hipótesis y prueba A/B para optimizar ingresos en una tienda de Ecommerce.",
+    herramientas: "Python, Pandas, Matplotlib",
+    imagen: "proyecto1.webp",
+    enlace: "https://github.com/GuillermoTeran/Priorizacion-de-hipotesis-y-analisis-de-prueba-A-B-para-optimizacion-de-ingresos---Proyecto-de-Ecome",
+    categoria: "análisis de datos"
   },
   {
-    titulo: "Proyecto 6",
-    descripcion: "Descripción del proyecto 6.",
-    imagen: "images/proyecto6.webp",
-    enlace: "#",
-    categoria: "analisis",
-    herramientas: "Python, Matplotlib"
+    titulo: "Análisis de comportamiento de compra de clientes — Proyecto Instacart",
+    descripcion: "Análisis de datos de Instacart, una plataforma de entrega de comestibles en línea para explorar los hábitos de compra de los clientes.",
+    herramientas: "Python, EDA, visualización",
+    imagen: "proyecto2.webp",
+    enlace: "https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-compra-de-clientes-Proyecto-Instacart",
+    categoria: "análisis de datos"
   },
   {
-    titulo: "Proyecto 7",
-    descripcion: "Descripción del proyecto 7.",
-    imagen: "images/proyecto7.webp",
-    enlace: "#",
-    categoria: "dashboard",
-    herramientas: "Looker Studio, SQL"
+    titulo: "Caso de Estudio SQL: Análisis del Comportamiento de Lectores Durante la Pandemia",
+    descripcion: "Análisis de una base de datos relacional de una startup del sector editorial que busca lanzar un nuevo producto digital para lectores y lectoras.",
+    herramientas: "PostgreSQL, Python, Pandas (solo para la impresión de resultados)",
+    imagen: "proyecto4.webp",
+    enlace: "https://github.com/GuillermoTeran/Caso-de-Estudio-SQL-Analisis-del-Comportamiento-de-Lectores-Durante-la-Pandemia",
+    categoria: "análisis de datos"
   },
   {
-    titulo: "Proyecto 8",
-    descripcion: "Descripción del proyecto 8.",
-    imagen: "images/proyecto8.webp",
-    enlace: "#",
-    categoria: "analisis",
-    herramientas: "Excel avanzado"
+    titulo: "Dashboard de tendencias de YouTube",
+    descripcion: "Análisis automatizado y visualización de tendencias en YouTube.",
+    herramientas: "Python, Tableau, PostgreSQL",
+    imagen: "proyecto8.webp",
+    enlace: "https://github.com/GuillermoTeran/-Caso-de-Estudio-Dashboard-de-Tendencias-de-Videos-en-YouTube",
+    enlace: "https://public.tableau.com/views/Libro1_17212954380800/Dashboard1?:language=es-",
+    categoria: "dashboards"
   },
   {
-    titulo: "Proyecto 9",
-    descripcion: "Descripción del proyecto 9.",
-    imagen: "images/proyecto9.webp",
-    enlace: "#",
-    categoria: "dashboard",
-    herramientas: "Power BI"
+    titulo: "Dashboard ingresos y descuentos — Salón de belleza",
+    descripcion: "Visualización de ingresos, descuentos y rendimiento de productos y servicios.",
+    herramientas: "Excel, Tablas dinámicas, Fórmulas, Gráficos",
+    imagen: "proyecto13.webp",
+    enlace: "https://github.com/GuillermoTeran/Caso-de-Estudio-Dashboard-Ingresos-y-Descuentos-Salon-de-Belleza-",
+    categoria: "dashboards"
   },
   {
-    titulo: "Proyecto 10",
-    descripcion: "Descripción del proyecto 10.",
-    imagen: "images/proyecto10.webp",
-    enlace: "#",
-    categoria: "analisis",
-    herramientas: "Python, Jupyter"
+    titulo: "Dashboard de ventas — Productos agroquímicos",
+    descripcion: "Visualización de ingresos mensuales y totales de ventas.",
+    herramientas: "Excel, Tableau",
+    imagen: "proyecto12.webp",
+    enlace: "https://github.com/GuillermoTeran/Caso-de-Estudio-Dashboard-Productos-Agroquimicos",
+    enlace: "https://public.tableau.com/app/profile/guillermo.teran3150/viz/DashboardProductosAgroquimicos/DashboardVentasProductosAgroquimicos",
+    categoria: "dashboards"
   },
   {
-    titulo: "Proyecto 11",
-    descripcion: "Descripción del proyecto 11.",
-    imagen: "images/proyecto11.webp",
-    enlace: "#",
-    categoria: "dashboard",
-    herramientas: "Excel, VBA"
+    titulo: "Análisis de ventas de videojuegos y detección de patrones de éxito — Proyecto Ice Games",
+    descripcion: "Análisis de una tienda online de videojuegos con presencia global para identificar patrones que determinen si un videojuego puede considerarse exitoso.",
+    herramientas: "Python (pandas, numpy, matplotlib, seaborn, scipy), ",
+    imagen: "proyecto11.webp",
+    enlace: "https://github.com/GuillermoTeran/Analisis-de-ventas-de-videojuegos-y-deteccion-de-patrones-de-exito-Proyecto-Ice-Games",
+    categoria: "análisis de datos"
   },
   {
-    titulo: "Proyecto 12",
-    descripcion: "Dashboard interactivo para el análisis de productos agroquímicos, con métricas clave y filtros dinámicos.",
-    imagen: "images/proyecto12.webp",
-    enlace: "#",
-    categoria: "dashboard",
-    herramientas: "Power BI, SQL Server"
+    titulo: "Análisis de eficiencia de marketing y comportamiento de clientes — Proyecto para Showz",
+    descripcion: "Realización de un estudio integral para optimizar los gastos de marketing y entender mejor el comportamiento de los usuarios en la plataforma.",
+    herramientas: "Python (pandas, numpy, matplotlib, seaborn), Análisis cohortes, Atribución de canales, KPIs de marketing (LTV, CAC, ROMI)",
+    imagen: "proyecto9.webp",
+    enlace: "https://github.com/GuillermoTeran/Analisis-de-eficiencia-de-marketing-y-comportamiento-de-clientes-Proyecto-para-Showz",
+    categoria: "análisis de datos"
   },
   {
-    titulo: "Proyecto 13",
-    descripcion: "Dashboard para ingresos y descuentos de un salón de belleza. Permite análisis mensual y por categoría.",
-    imagen: "images/proyecto13.webp",
-    enlace: "#",
-    categoria: "dashboard",
-    herramientas: "Excel, Power Query"
+    titulo: "",
+    descripcion: "Análisis de datos para Zuber: Comportamiento de viajes compartidos en Chicago.",
+    herramientas: "PostgreSQL (consultas complejas y agrupación de datos), Python (pandas, matplotlib, seaborn, scipy)",
+    imagen: "proyecto6.webp",
+    enlace: "https://github.com/GuillermoTeran/Analisis-de-datos-para-Zuber-Comportamiento-de-viajes-compartidos-en-Chicago",
+    categoria: "análisis de datos"
   }
 ];
-
-function mostrarProyectos(categoria) {
-  const contenedor = document.getElementById("proyectos-container");
-  contenedor.innerHTML = "";
-
-  const proyectosFiltrados = categoria === "todos"
-    ? proyectos
-    : proyectos.filter(p => p.categoria === categoria);
-
-  proyectosFiltrados.forEach(p => {
-    const div = document.createElement("div");
-    div.classList.add("proyecto");
-    div.innerHTML = `
-      <img src="${p.imagen}" alt="${p.titulo}" />
-      <h3>${p.titulo}</h3>
-      <p>${p.descripcion}</p>
-      <p class="herramientas"><strong>Herramientas:</strong> ${p.herramientas}</p>
-      <a href="${p.enlace}" target="_blank">Ver en GitHub</a>
-    `;
-    contenedor.appendChild(div);
-  });
-}
-
-document.querySelectorAll(".btn-filtro").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".btn-filtro").forEach(b => b.classList.remove("activo"));
-    btn.classList.add("activo");
-    mostrarProyectos(btn.dataset.categoria);
-  });
-});
-
-mostrarProyectos("todos");
