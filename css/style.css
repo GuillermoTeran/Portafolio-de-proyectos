@@ -40,23 +40,21 @@ body {
   line-height: 1.6;
 }
 
-.video-cv {
+/* Video CV */
+.video-container {
+  display: flex;
+  justify-content: center;
   margin-top: 2rem;
-  text-align: center;
 }
 
-.video-cv h3 {
-  margin-bottom: 1rem;
-}
-
-.video-cv video {
+.video-container video {
   width: 100%;
   max-width: 720px;
   height: auto;
   border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Portafolio */
 #portafolio {
   padding: 2rem;
   background-color: #eef2f5;
@@ -94,7 +92,7 @@ body {
   background-color: white;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -110,7 +108,6 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Contacto */
 #contacto {
   padding: 2rem;
   background-color: #ffffff;
