@@ -1,107 +1,149 @@
 /* Estilos generales */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Calibri, sans-serif;
+  font-size: 10pt;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   color: #333;
+  line-height: 1.6;
 }
 
 .perfil {
+  text-align: center;
   padding: 2rem;
-  background-color: #ffffff;
-}
-
-.tarjeta-perfil {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
 }
 
 .foto-perfil {
   width: 150px;
   height: 150px;
-  object-fit: cover;
   border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
-.info-perfil h1 {
+.nombre {
+  font-size: 24pt;
+  font-weight: bold;
   margin: 0;
 }
 
-.descripcion-perfil {
-  margin-top: 1.5rem;
-  max-width: 100%;
+.titulo {
+  font-size: 18pt;
+  margin: 0.5rem 0;
 }
 
-.descripcion-perfil p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+.info-contacto {
+  font-size: 10pt;
 }
 
+.descripcion {
+  padding: 1.5rem 2rem;
+  text-align: justify;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.video-cv {
+  text-align: center;
+  margin: 2rem;
+}
+
+.video-cv video {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+/* Portafolio */
 #portafolio {
   padding: 2rem;
   background-color: #eef2f5;
+  text-align: center;
 }
 
 .botones-categorias {
-  margin-bottom: 1.5rem;
   display: flex;
-  gap: 1rem;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .btn-filtro {
   padding: 0.5rem 1rem;
+  background-color: #ccc;
   border: none;
-  background-color: #cccccc;
-  cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.btn-filtro.activo,
-.btn-filtro:hover {
+.btn-filtro:hover,
+.btn-filtro.activo {
   background-color: #007bff;
   color: white;
 }
 
 .grid-proyectos {
   display: grid;
-  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
 .proyecto {
-  background-color: white;
-  padding: 1rem;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: left;
 }
 
 .imagen-proyecto {
   width: 100%;
-  max-height: 160px;
+  height: 160px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
 
 .proyecto h3 {
-  margin-top: 0.5rem;
+  margin-top: 0;
 }
 
+.boton-proyecto {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: white;
+  background-color: #007bff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 10pt;
+}
+
+/* Contacto */
 #contacto {
   padding: 2rem;
-  background-color: #ffffff;
   text-align: center;
 }
 
-.tarjeta-contacto a {
+#contacto a {
   display: block;
   margin: 0.5rem 0;
   color: #007bff;
   text-decoration: none;
+  font-size: 10pt;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .video-cv video {
+    width: 100%;
+  }
+
+  .descripcion {
+    padding: 1rem;
+  }
 }
