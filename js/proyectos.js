@@ -5,7 +5,7 @@ const proyectos = [
     herramientas: "Python, scikit-learn, Jupyter Notebook",
     imagen: "proyecto5.webp",
     enlace: "https://github.com/GuillermoTeran/Prediccion-de-cancelacion-de-clientes-y-segmentacion-de-usuarios-Proyecto-para-Model-Fitness",
-    categoria: "analisis"
+    categoria: "análisis de datos"
   },
   {
     titulo: "Detección de operadores ineficaces — Telefonía Virtual",
@@ -13,7 +13,7 @@ const proyectos = [
     herramientas: "Python, SciPy, Seaborn",
     imagen: "proyecto7.webp",
     enlace: "https://github.com/GuillermoTeran/Caso-de-Estudio-Deteccion-de-Operadores-Ineficaces-en-un-Servicio-de-Telefonia-Virtual",
-    categoria: "analisis"
+    categoria: "análisis de datos"
   },
   {
     titulo: "Análisis de comportamiento y test A/A/B — App de alimentos",
@@ -21,7 +21,7 @@ const proyectos = [
     herramientas: "Python, statsmodels, visualización",
     imagen: "proyecto10.webp",
     enlace: "https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-usuario-y-test-A-A-B-en-una-app-de-productos-alimenticios",
-    categoria: "analisis"
+    categoria: "análisis de datos"
   },
   {
     titulo: "Análisis de tarifas prepago — Megaline",
@@ -29,7 +29,7 @@ const proyectos = [
     herramientas: "Python, Pandas, EDA",
     imagen: "proyecto3.webp",
     enlace: "https://github.com/GuillermoTeran/Analisis-de-tarifas-prepago---Proyecto-Megaline",
-    categoria: "analisis"
+    categoria: "análisis de datos"
   },
   {
     titulo: "Análisis de optimización de ingresos — Ecommerce",
@@ -37,7 +37,7 @@ const proyectos = [
     herramientas: "Python, Pandas, Matplotlib",
     imagen: "proyecto1.webp",
     enlace: "https://github.com/GuillermoTeran/Priorizacion-de-hipotesis-y-analisis-de-prueba-A-B-para-optimizacion-de-ingresos---Proyecto-de-Ecome",
-    categoria: "analisis"
+    categoria: "análisis de datos"
   },
   {
     titulo: "Análisis de comportamiento de compra de clientes — Proyecto Instacart",
@@ -45,7 +45,7 @@ const proyectos = [
     herramientas: "Python, EDA, visualización",
     imagen: "proyecto2.webp",
     enlace: "https://github.com/GuillermoTeran/Analisis-de-comportamiento-de-compra-de-clientes-Proyecto-Instacart",
-    categoria: "analisis"
+    categoria: "análisis de datos"
   },
   {
     titulo: "Caso de Estudio SQL: Análisis del Comportamiento de Lectores Durante la Pandemia",
@@ -53,7 +53,7 @@ const proyectos = [
     herramientas: "PostgreSQL, Python, Pandas (solo para la impresión de resultados)",
     imagen: "proyecto4.webp",
     enlace: "https://github.com/GuillermoTeran/Caso-de-Estudio-SQL-Analisis-del-Comportamiento-de-Lectores-Durante-la-Pandemia",
-    categoria: "analisis"
+    categoria: "análisis de datos"
   },
   {
     titulo: "Dashboard de tendencias de YouTube",
@@ -61,8 +61,7 @@ const proyectos = [
     herramientas: "Python, Tableau, PostgreSQL",
     imagen: "proyecto8.webp",
     enlace: "https://github.com/GuillermoTeran/-Caso-de-Estudio-Dashboard-de-Tendencias-de-Videos-en-YouTube",
-    enlace: "https://public.tableau.com/views/Libro1_17212954380800/Dashboard1?:language=es-",
-    categoria: "dashboard"
+    categoria: "dashboards"
   },
   {
     titulo: "Dashboard ingresos y descuentos — Salón de belleza",
@@ -70,7 +69,7 @@ const proyectos = [
     herramientas: "Excel, Tablas dinámicas, Fórmulas, Gráficos",
     imagen: "proyecto13.webp",
     enlace: "https://github.com/GuillermoTeran/Caso-de-Estudio-Dashboard-Ingresos-y-Descuentos-Salon-de-Belleza-",
-    categoria: "dashboard"
+    categoria: "dashboards"
   },
   {
     titulo: "Dashboard de ventas — Productos agroquímicos",
@@ -78,8 +77,7 @@ const proyectos = [
     herramientas: "Excel, Tableau",
     imagen: "proyecto12.webp",
     enlace: "https://github.com/GuillermoTeran/Caso-de-Estudio-Dashboard-Productos-Agroquimicos",
-    enlace: "https://public.tableau.com/app/profile/guillermo.teran3150/viz/DashboardProductosAgroquimicos/DashboardVentasProductosAgroquimicos",
-    categoria: "dashboard"
+    categoria: "dashboards"
   },
   {
     titulo: "Análisis de ventas de videojuegos y detección de patrones de éxito — Proyecto Ice Games",
@@ -87,7 +85,7 @@ const proyectos = [
     herramientas: "Python (pandas, numpy, matplotlib, seaborn, scipy), ",
     imagen: "proyecto11.webp",
     enlace: "https://github.com/GuillermoTeran/Analisis-de-ventas-de-videojuegos-y-deteccion-de-patrones-de-exito-Proyecto-Ice-Games",
-    categoria: "analisis"
+    categoria: "análisis de datos"
   },
   {
     titulo: "Análisis de eficiencia de marketing y comportamiento de clientes — Proyecto para Showz",
@@ -95,7 +93,7 @@ const proyectos = [
     herramientas: "Python (pandas, numpy, matplotlib, seaborn), Análisis cohortes, Atribución de canales, KPIs de marketing (LTV, CAC, ROMI)",
     imagen: "proyecto9.webp",
     enlace: "https://github.com/GuillermoTeran/Analisis-de-eficiencia-de-marketing-y-comportamiento-de-clientes-Proyecto-para-Showz",
-    categoria: "analisis"
+    categoria: "análisis de datos"
   },
   {
     titulo: "Análisis de datos para Zuber: Comportamiento de viajes compartidos en Chicago",
@@ -103,6 +101,6 @@ const proyectos = [
     herramientas: "PostgreSQL (consultas complejas y agrupación de datos), Python (pandas, matplotlib, seaborn, scipy)",
     imagen: "proyecto6.webp",
     enlace: "https://github.com/GuillermoTeran/Analisis-de-datos-para-Zuber-Comportamiento-de-viajes-compartidos-en-Chicago",
-    categoria: "analisis"
+    categoria: "análisis de datos"
   }
 ];
