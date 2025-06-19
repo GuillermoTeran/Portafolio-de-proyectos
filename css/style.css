@@ -75,6 +75,10 @@ body {
   background-color: #eef2f5;
 }
 
+#portafolio h2 {
+  text-align: center;
+}
+
 .botones-categorias {
   margin-bottom: 1.5rem;
   display: flex;
