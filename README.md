@@ -6,8 +6,7 @@ Este repositorio contiene el portafolio web de Guillermo Teran, Analista de Dato
 
 ## Estructura del proyecto
 
-- `index.html` : Versión en español del portafolio.
-- `index-en.html` : Versión en inglés del portafolio.
+- `index.html` : Versión en español/inglés del portafolio.
 
 ---
 
@@ -18,7 +17,7 @@ Guillermo Teran es un Analista de Datos con experiencia en administración, aná
 El portafolio muestra:
 
 - Perfil profesional y aficiones.
-- Proyectos de análisis de datos (11 proyectos).
+- Proyectos de análisis de datos (13 proyectos).
 - Dashboards (incluyendo un dashboard de tendencias de videos en YouTube).
 - Información de contacto y enlaces a correo electrónico y LinkedIn.
 
@@ -28,8 +27,7 @@ El portafolio muestra:
 
 El portafolio está publicado con GitHub Pages y puede ser visualizado en:
 
-
-(Recuerda reemplazar `tu-usuario` y `portafolio-guillermo` con tu usuario y nombre de repositorio reales)
+https://guillermoteran.github.io/Portafolio-de-proyectos/ 
 
 ---
 
