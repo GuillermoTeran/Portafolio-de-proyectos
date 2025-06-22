@@ -9,9 +9,12 @@
 <body>
 
   <!-- Selector de idioma -->
-  <div class="selector-idioma">
-    <button id="btn-es">ES</button>
-    <button id="btn-en">EN</button>
+  <div style="text-align: right; padding: 1rem;">
+    <label for="language-select"><strong id="label-language">Idioma:</strong></label>
+    <select id="language-select">
+      <option value="es" selected>Español</option>
+      <option value="en">English</option>
+    </select>
   </div>
 
   <!-- Perfil -->
@@ -20,24 +23,21 @@
       <img src="images/profile.webp" alt="Foto de perfil" class="foto-perfil"/>
       <div class="info-perfil">
         <h1>Guillermo Teran</h1>
-        <h2 data-i18n="titulo">Analista de Datos</h2>
-        <p><strong data-i18n="telefono-label">Teléfono:</strong> +351 961 900 127</p>
-        <p><strong data-i18n="ubicacion-label">Ubicación:</strong> Fátima – Portugal</p>
+        <h2 id="rol">Analista de Datos</h2>
+        <p><strong id="tel-label">Teléfono:</strong> +351 961 900 127</p>
+        <p><strong id="ubicacion-label">Ubicación:</strong> Fátima – Portugal</p>
         <div class="descripcion-aficiones">
-          <p data-i18n="descripcion">
-            Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranzas y desarrollo de KPI’s, apasionado por la transformación de datos en información valiosa para la toma de decisiones estratégicas. Cuento con habilidades en herramientas como Excel avanzado, SQL, Python y Tableau lo que me permite extraer, limpiar y visualizar datos de manera eficiente.
-            Busco una oportunidad para aplicar mis habilidades de Python y contribuir a la optimización de procesos analíticos mediante la generación de informes estratégicos y la mejora en la toma de decisiones basadas en datos.
-          </p>
-          <p data-i18n="aficiones">
-            <strong>Aficiones:</strong> Caminar al aire libre y disfrutar de la naturaleza, leer artículos sobre política, negocios y tecnología, ver partidos de fútbol y tenis.
-          </p>
+          <p id="descripcion"></p>
+          <p><strong id="aficiones-label">Aficiones:</strong> <span id="aficiones"></span></p>
         </div>
       </div>
     </div>
 
     <!-- Video CV -->
     <div class="video-container">
-      <h2 data-i18n="video-cv">Video CV</h2>
+      <div style="text-align: center; margin-bottom: 1rem;">
+        <h3 id="titulo-video">Video CV</h3>
+      </div>
       <video controls>
         <source src="Video CV Guillermo Teran.mp4" type="video/mp4">
         Tu navegador no soporta la reproducción de video.
@@ -47,11 +47,11 @@
 
   <!-- Portafolio -->
   <section id="portafolio">
-    <h2 data-i18n="portafolio">Portafolio de Proyectos</h2>
+    <h2 id="titulo-portafolio">Portafolio de Proyectos</h2>
     <div class="botones-categorias">
-      <button class="btn-filtro activo" data-categoria="todos">Todos</button>
-      <button class="btn-filtro" data-categoria="análisis de datos">Análisis de Datos</button>
-      <button class="btn-filtro" data-categoria="dashboards">Dashboards</button>
+      <button class="btn-filtro activo" data-categoria="todos" id="btn-todos">Todos</button>
+      <button class="btn-filtro" data-categoria="análisis de datos" id="btn-analisis">Análisis de Datos</button>
+      <button class="btn-filtro" data-categoria="dashboards" id="btn-dashboards">Dashboards</button>
     </div>
     <div id="proyectos-container" class="grid-proyectos"></div>
   </section>
@@ -59,7 +59,7 @@
   <!-- Contacto -->
   <section id="contacto">
     <div class="tarjeta-contacto">
-      <h2 data-i18n="contacto">Contacto</h2>
+      <h2 id="titulo-contacto">Contacto</h2>
       <a href="mailto:teranguillermo59@gmail.com">teranguillermo59@gmail.com</a>
       <a href="https://www.linkedin.com/in/guillermo-teran" target="_blank">LinkedIn</a>
     </div>
@@ -67,73 +67,91 @@
 
   <script src="js/projects.js"></script>
   <script>
-    const contenedor = document.getElementById("proyectos-container");
-    const botones = document.querySelectorAll(".btn-filtro");
-
-    function mostrarProyectos(categoria) {
-      contenedor.innerHTML = "";
-
-      const filtrados = categoria === "todos"
-        ? proyectos
-        : proyectos.filter(p => p.categoria === categoria);
-
-      filtrados.forEach(p => {
-        const div = document.createElement("div");
-        div.classList.add("proyecto");
-        div.innerHTML = `
-          <img src="images/${p.imagen}" alt="${p.titulo}" class="imagen-proyecto"/>
-          <h3>${p.titulo}</h3>
-          <p>${p.descripcion}</p>
-          <p><strong>Herramientas:</strong> ${p.herramientas}</p>
-          <a href="${p.enlace}" target="_blank">Ver proyecto</a>
-        `;
-        contenedor.appendChild(div);
-      });
-    }
-
-    botones.forEach(boton => {
-      boton.addEventListener("click", () => {
-        botones.forEach(btn => btn.classList.remove("activo"));
-        boton.classList.add("activo");
-        mostrarProyectos(boton.getAttribute("data-categoria"));
-      });
-    });
-
-    mostrarProyectos("todos");
-
-    // Traducción
     const traducciones = {
       es: {
-        titulo: "Analista de Datos",
-        telefono-label: "Teléfono:",
-        ubicacion-label: "Ubicación:",
-        descripcion: "Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranzas y desarrollo de KPI’s, apasionado por la transformación de datos en información valiosa para la toma de decisiones estratégicas. Cuento con habilidades en herramientas como Excel avanzado, SQL, Python y Tableau lo que me permite extraer, limpiar y visualizar datos de manera eficiente. Busco una oportunidad para aplicar mis habilidades de Python y contribuir a la optimización de procesos analíticos mediante la generación de informes estratégicos y la mejora en la toma de decisiones basadas en datos.",
-        aficiones: "<strong>Aficiones:</strong> Caminar al aire libre y disfrutar de la naturaleza, leer artículos sobre política, negocios y tecnología, ver partidos de fútbol y tenis.",
-        video-cv: "Video CV",
-        portafolio: "Portafolio de Proyectos",
-        contacto: "Contacto"
+        rol: "Analista de Datos",
+        "tel-label": "Teléfono:",
+        "ubicacion-label": "Ubicación:",
+        descripcion: "Analista de Datos con formación en Administración de Empresas y experiencia en crédito, cobranzas y desarrollo de KPI’s, apasionado por la transformación de datos en información valiosa para la toma de decisiones estratégicas. Cuento con habilidades en herramientas como Excel avanzado, SQL, Python y Tableau lo que me permite extraer, limpiar y visualizar datos de manera eficiente.\nBusco una oportunidad para aplicar mis habilidades de Python y contribuir a la optimización de procesos analíticos mediante la generación de informes estratégicos y la mejora en la toma de decisiones basadas en datos.",
+        "aficiones-label": "Aficiones:",
+        aficiones: "Caminar al aire libre y disfrutar de la naturaleza, leer artículos sobre política, negocios y tecnología, ver partidos de fútbol y tenis.",
+        "titulo-video": "Video CV",
+        "titulo-portafolio": "Portafolio de Proyectos",
+        "btn-todos": "Todos",
+        "btn-analisis": "Análisis de Datos",
+        "btn-dashboards": "Dashboards",
+        "titulo-contacto": "Contacto",
+        "label-language": "Idioma:"
       },
       en: {
-        titulo: "Data Analyst",
-        telefono-label: "Phone:",
-        ubicacion-label: "Location:",
-        descripcion: "Data Analyst with a background in Business Administration and experience in credit, collections, and KPI development. Passionate about transforming data into valuable insights for strategic decision-making. Skilled in tools such as advanced Excel, SQL, Python, and Tableau, enabling efficient data extraction, cleaning, and visualization. Seeking an opportunity to apply Python skills and contribute to process optimization through strategic reporting and data-driven decision-making.",
-        aficiones: "<strong>Hobbies:</strong> Walking outdoors and enjoying nature, reading articles on politics, business, and technology, watching football and tennis.",
-        video-cv: "CV Video",
-        portafolio: "Project Portfolio",
-        contacto: "Contact"
+        rol: "Data Analyst",
+        "tel-label": "Phone:",
+        "ubicacion-label": "Location:",
+        descripcion: "Data Analyst with a background in Business Administration and experience in credit, collections, and KPI development, passionate about transforming data into valuable information for strategic decision-making. Skilled in tools like advanced Excel, SQL, Python, and Tableau, enabling efficient data extraction, cleaning, and visualization.\nI seek an opportunity to apply my Python skills and contribute to the optimization of analytical processes through strategic reporting and data-driven decision-making.",
+        "aficiones-label": "Hobbies:",
+        aficiones: "Walking outdoors and enjoying nature, reading articles about politics, business, and technology, watching football and tennis matches.",
+        "titulo-video": "Video Resume",
+        "titulo-portafolio": "Project Portfolio",
+        "btn-todos": "All",
+        "btn-analisis": "Data Analysis",
+        "btn-dashboards": "Dashboards",
+        "titulo-contacto": "Contact",
+        "label-language": "Language:"
       }
     };
 
-    function cambiarIdioma(idioma) {
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const clave = el.getAttribute("data-i18n");
-        el.innerHTML = traducciones[idioma][clave];
-      });
+    function traducir(idioma) {
+      const textos = traducciones[idioma];
+      for (const key in textos) {
+        const el = document.getElementById(key);
+        if (el) {
+          el.textContent = textos[key];
+        }
+      }
     }
 
-    document.getElementById("btn-es").addEventListener("click", () => cambiarIdioma("es"));
-    document.getElementById("btn-en").addEventListener("click", () => cambiarIdioma("en"));
+    document.getElementById("language-select").addEventListener("change", function () {
+      const lang = this.value;
+      traducir(lang);
+    });
+
+    // Mostrar proyectos al cargar
+    document.addEventListener("DOMContentLoaded", function () {
+      const contenedor = document.getElementById("proyectos-container");
+      const botones = document.querySelectorAll(".btn-filtro");
+
+      function mostrarProyectos(categoria) {
+        contenedor.innerHTML = "";
+
+        const filtrados = categoria === "todos"
+          ? proyectos
+          : proyectos.filter(p => p.categoria === categoria);
+
+        filtrados.forEach(p => {
+          const div = document.createElement("div");
+          div.classList.add("proyecto");
+          div.innerHTML = `
+            <img src="images/${p.imagen}" alt="${p.titulo}" class="imagen-proyecto"/>
+            <h3>${p.titulo}</h3>
+            <p>${p.descripcion}</p>
+            <p><strong>Herramientas:</strong> ${p.herramientas}</p>
+            <a href="${p.enlace}" target="_blank">Ver proyecto</a>
+          `;
+          contenedor.appendChild(div);
+        });
+      }
+
+      botones.forEach(boton => {
+        boton.addEventListener("click", () => {
+          botones.forEach(btn => btn.classList.remove("activo"));
+          boton.classList.add("activo");
+          mostrarProyectos(boton.getAttribute("data-categoria"));
+        });
+      });
+
+      mostrarProyectos("todos");
+      traducir("es");
+    });
   </script>
 </body>
 </html>
