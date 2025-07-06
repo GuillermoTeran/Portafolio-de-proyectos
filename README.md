@@ -27,7 +27,7 @@ El portafolio muestra:
 
 El portafolio está publicado con GitHub Pages y puede ser visualizado en:
 
-https://guillermoteran.github.io/Portafolio-de-proyectos/ 
+https://guillermoteran.github.io/Portafolio-de-proyectos/
 
 ---
 
